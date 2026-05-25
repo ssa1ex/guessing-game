@@ -1,0 +1,23 @@
+import random
+def is_valid(w):
+    if 1 <= w <= 100:
+        return True
+    else:
+        return False
+q = random.randint(1, 100)
+print('welcome to guessing game')
+while True:
+    try:
+        print('please enter number')
+        player = int(input())
+        is_valid(player)
+        if player < q:
+            print('Your number is less than the guessed one, try again.')
+        elif player > q:
+           print('Your number is more than the guessed one, try again.')
+        else:
+            print('You guessed it, congratulations!')
+            break
+    except:
+        print('Or maybe we should introduce an integer from 1 to 100?')
+print('Thanks for playing the number guessing game. See you later...')
